@@ -162,5 +162,10 @@
 	"remoteEnv": {
     "PATH": "${workspaceFolder}/Scripts:${containerEnv:PATH}",
     "PSModulePath": "${workspaceFolder}/Modules"
+  },
+
+  // 👇 Set the host requirements for the container
+  "hostRequirements": {
+    "memory": "8gb"
   }
 }
