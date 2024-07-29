@@ -1,9 +1,9 @@
 {
-  "id": "m365-admin",
+  "id": "m365-ultimate",
   "version": "0.1.0",
-  "name": "🧑‍💼 Admin Container for Microsoft 365",
-  "description": "A Template for Microsoft 365 Admins to manage their Microsoft 365 and Azure environment. The template is based on a pre-build image with common tools and extensions to fire off terminal commands right away. Bootstrap your environment with a single click and in no time.",
-  "documentationURL": "https://github.com/workoho/devcontainer-templates/tree/main/src/m365-admin",
+  "name": "🧑‍🔧 Ultimate Container for Microsoft 365",
+  "description": "A Template for Microsoft 365 professionals for management and development of Microsoft 365 and Azure. This one combines the M365 admin and development templates for those who want all the functionality. The pre-build image base helps to bootstrap your environment with a single click and in no time.",
+  "documentationURL": "https://github.com/workoho/devcontainer-templates/tree/main/src/m365-ultimate",
   "licenseURL": "https://github.com/workoho/devcontainer-templates/blob/main/LICENSE.txt",
   "publisher": "Workoho GmbH",
   "options": {

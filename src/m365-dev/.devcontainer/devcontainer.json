@@ -1,7 +1,7 @@
 // More info about devcontainer.json: https://containers.dev/implementors/json_reference/
 {
-	"name": "🧑‍💼 M365 Admin",
-	"image": "ghcr.io/workoho/devcontainers/m365-admin:${templateOption:imageVersion}",
+	"name": "🧑‍💻 M365 Development",
+	"image": "ghcr.io/workoho/devcontainers/m365-dev:${templateOption:imageVersion}",
   // 👆 This pre-built image includes PowerShell and common PowerShell modules already.
 
 	// 👇 Additional Features to add to the Dev Container. More info: https://containers.dev/implementors/features.
@@ -14,15 +14,20 @@
     //   "resources": ""
     // }
 
-    // Azure CLI with some extensions for administration
+    // Azure CLI with some extensions for development (including administration)
     "ghcr.io/devcontainers/features/azure-cli:1": {
       "version": "latest",
-      "extensions": "account, automation, ssh",
-      "installBicep": false
+      "extensions": "account, automation, azure-devops, functionapp, log-analytics, resource-graph, ssh",
+      "installBicep": true
     },
 
     // GitHub CLI
     "ghcr.io/devcontainers/features/github-cli:1": {
+      "version": "latest"
+    },
+
+    // CLI for Microsoft 365
+    "ghcr.io/jpawlowski/devcontainer-features/cli-microsoft365:1": {
       "version": "latest"
     }
   },
@@ -91,6 +96,11 @@
         // Code Editing related extensions
         "editorconfig.editorconfig",
 
+        // Git related extensions
+        "mhutchie.git-graph",
+        "donjayamanne.githistory",
+        "eamodio.gitlens",
+
         // GitHub related extensions
         "ms-vscode.vscode-github-issue-notebooks",
         "github.vscode-pull-request-github",
@@ -108,15 +118,26 @@
         "mads-hartmann.bash-ide-vscode",
         "rogalmic.bash-debug",
 
+        // Bash script snippets
+        "Remisa.shellman",
+        "rpinski.shebang-snippets",
+
         // PowerShell related extensions
         "ms-vscode.powershell",
+        "pspester.pester-test",
         "martinfliegner.dark-powershell-theme",
+
+        // REST API related extensions
+        "humao.rest-client",
 
         // YAML related extensions
         "redhat.vscode-yaml",
 
         // Azure related extensions
-        "ms-vscode.azurecli"
+        "ms-vscode.azurecli",
+        "ms-vscode.vscode-node-azure-pack",
+        "ms-azuretools.vscode-docker",
+        "ms-azuretools.vscode-bicep"
       ]
 		}
 	},
