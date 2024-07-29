@@ -81,9 +81,6 @@
 
       // 👇 Add the IDs of extensions you want installed when the container is created.
       "extensions": [
-        // Terminal related extensions
-        "fabiospampinato.vscode-terminals",
-
         // Container development related extensions
         "ms-vscode-remote.remote-containers",
         "github.codespaces",
