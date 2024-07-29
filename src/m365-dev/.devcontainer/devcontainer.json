@@ -11,7 +11,7 @@
     // 👇    https://github.com/jpawlowski/devcontainer-features/tree/main/src/powershell-extended
     // "ghcr.io/jpawlowski/devcontainer-features/powershell-extended:1": {
     //   "repositories": "",
-    //   "resources": ""
+    //   "resources": ""    // Separate multiple resources with a semicolon
     // }
 
     // Azure CLI with some extensions for development (including administration)
