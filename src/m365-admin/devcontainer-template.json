@@ -1,0 +1,52 @@
+{
+  "id": "m365-admin",
+  "version": "1.0.0",
+  "name": "🧑‍💼 Admincontainer for Microsoft 365",
+  "description": "A Template for Microsoft 365 Admins to manage their Microsoft 365 and Azure environment. The template is based on a pre-build image with common tools and extensions. Bootstrap your environment with a single click and in no time.",
+  "documentationURL": "https://github.com/workoho/devcontainer-templates/tree/main/src/m365-admin",
+  "licenseURL": "https://github.com/workoho/devcontainer-templates/blob/main/LICENSE.txt",
+  "publisher": "Workoho GmbH",
+  "options": {
+    "imageVersion": {
+      "type": "string",
+      "description": "Select or enter the image version:",
+      "proposals": [
+        "latest",
+        "v1"
+      ],
+      "default": "latest"
+    },
+    "powerShellUpdatecheck": {
+      "type": "string",
+      "enum": [
+        "Off",
+        "Default",
+        "LTS"
+      ],
+      "description": "Configure PowerShell: Notify on startup that a new version has been released.",
+      "default": "LTS"
+    },
+    "powerShellTelemetryOptOut": {
+      "type": "string",
+      "enum": [
+        "0",
+        "1"
+      ],
+      "description": "Configure PowerShell: Opt-out of PowerShell Telemetry data collection.",
+      "default": "1"
+    }
+  },
+  "platforms": [
+    "Azure",
+    "Microsoft 365",
+    "PowerShell"
+  ],
+  "keywords": [
+    "intune",
+    "sharepoint",
+    "microsoft-entra",
+    "microsoft-graph",
+    "microsoft-teams",
+    "office-365"
+  ]
+}

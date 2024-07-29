@@ -1,0 +1,156 @@
+// More info about devcontainer.json: https://containers.dev/implementors/json_reference/
+{
+	"name": "🧑‍💼 M365 Admin",
+	"image": "ghcr.io/workoho/devcontainers/m365-admin:${templateOption:imageVersion}",
+  // 👆 This pre-built image includes PowerShell and common PowerShell modules already.
+
+	// 👇 Additional Features to add to the Dev Container. More info: https://containers.dev/implementors/features.
+  "features": {
+    // Azure CLI with some extensions
+    "ghcr.io/devcontainers/features/azure-cli:1": {
+      "version": "latest",
+      "extensions": "account, automation, azure-devops, functionapp, log-analytics, resource-graph, ssh",
+      "installBicep": true
+    },
+    "ghcr.io/devcontainers/features/github-cli:1": {
+      "version": "latest"
+    }
+
+    // 👇 Uncomment to install additional PowerShell modules and scripts to the container
+    // "ghcr.io/jpawlowski/devcontainer-features/powershell-extended:1": {
+    //   "repositories": "",
+    //   "resources": ""
+    // }
+
+    // 👇 Uncomment to add PnP CLI for Microsoft 365 to the container
+    // "ghcr.io/jpawlowski/devcontainer-features/cli-microsoft365:1": {
+    //   "version": "latest"
+    // }
+
+    // 👇 Uncomment to add PnP.PowerShell to the container
+    // "ghcr.io/jpawlowski/devcontainer-features/pnp.powershell:1": {
+    //   "version": "latest"
+    // }
+  },
+
+	// 👇 Use 'forwardPorts' to make a list of ports inside the container available locally.
+	// "forwardPorts": [],
+
+	// 👇 Use 'postCreateCommand' to run commands after the container is created.
+	// "postCreateCommand": "",
+
+	"customizations": {
+    "vscode": {
+      // 👇 Configure VS Code specific settings.
+      "settings": {
+			  "debug.openDebug": "neverOpen",
+			  "editor.formatOnType": true,
+			  "editor.formatOnPaste": true,
+			  "editor.mouseWheelZoom": true,
+			  "editor.tabCompletion": "on",
+        "terminal.integrated.defaultProfile.linux": "pwsh",
+        "terminal.integrated.profiles.linux": {
+          "pwsh": {
+            "name": "PowerShell",
+            "overrideName": true,
+            "path": "pwsh",
+            "args": [
+              "-Login",
+              "-NoLogo",
+              "-Interactive"
+            ],
+            "icon": "terminal-powershell"
+          },
+          "bash": {
+            "name": "Bash",
+            "overrideName": true,
+            "path": "bash",
+            "args": [
+              "--login"
+            ],
+            "icon": "terminal-bash"
+          },
+          "zsh": {
+            "name": "Zsh",
+            "overrideName": true,
+            "path": "zsh",
+            "args": [
+              "--login",
+              "--interactive"
+            ],
+            "icon": "terminal-debian"
+          }
+        },
+			  "window.zoomLevel": 0,
+			  "workbench.iconTheme": "vscode-icons"
+			},
+
+      // 👇 Add the IDs of extensions you want installed when the container is created.
+      "extensions": [
+        // Container development related extensions
+        "ms-vscode-remote.remote-containers",
+        "github.codespaces",
+
+        // Code Editing related extensions
+        "editorconfig.editorconfig",
+
+        // Git related extensions
+        "mhutchie.git-graph",
+        "donjayamanne.githistory",
+        "eamodio.gitlens",
+
+        // GitHub related extensions
+        "ms-vscode.vscode-github-issue-notebooks",
+        "github.vscode-pull-request-github",
+        "bierner.github-markdown-preview",
+        "github.vscode-github-actions",
+        "me-dutour-mathieu.vscode-github-actions",
+
+        // Markdown related extensions
+        "davidanson.vscode-markdownlint",
+        "yzhang.markdown-all-in-one",
+
+        // Bash related extensions
+        "timonwong.shellcheck",
+        "foxundermoon.shell-format",
+        "mads-hartmann.bash-ide-vscode",
+        "rogalmic.bash-debug",
+
+        // Bash script snippets
+        "Remisa.shellman",
+        "rpinski.shebang-snippets",
+
+        // PowerShell related extensions
+        "ms-vscode.powershell",
+        "pspester.pester-test",
+        "martinfliegner.dark-powershell-theme",
+
+        // REST API related extensions
+        "humao.rest-client",
+
+        // YAML related extensions
+        "redhat.vscode-yaml",
+
+        // Azure related extensions
+        "ms-vscode.vscode-node-azure-pack",
+        "ms-vscode.azurecli",
+        "ms-azuretools.vscode-docker",
+        "ms-azuretools.vscode-bicep"
+      ]
+		}
+	},
+
+	// 👇 Uncomment to connect as root instead. More info: https://aka.ms/dev-containers-non-root.
+	// "remoteUser": "root"
+
+	// 👇 Set environment variables that should apply to the entire container
+	"containerEnv": {
+		"POWERSHELL_UPDATECHECK": "${templateOption:powerShellUpdatecheck}",
+		"POWERSHELL_TELEMETRY_OPTOUT": "${templateOption:powerShellTelemetryOptOut}"
+	}
+
+	// 👇 Set environment variables for VS Code and related sub-processes (terminals, tasks, debugging, etc.)
+	// "remoteEnv": {
+	//     "PATH": "${containerEnv:PATH}:/some/other/path"
+	// }
+}
