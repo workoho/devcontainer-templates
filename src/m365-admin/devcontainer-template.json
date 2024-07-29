@@ -33,7 +33,7 @@
         "1"
       ],
       "description": "Configure PowerShell: Opt-out of PowerShell Telemetry data collection.",
-      "default": "1"
+      "default": "0"
     }
   },
   "platforms": [
