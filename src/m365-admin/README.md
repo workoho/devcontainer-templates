@@ -1,7 +1,7 @@
 
-# 🧑‍💼 Admincontainer for Microsoft 365 (m365-admin)
+# 🧑‍💼 Admin Container for Microsoft 365 (m365-admin)
 
-A Template for Microsoft 365 Admins to manage their Microsoft 365 and Azure environment. The template is based on a pre-build image with common tools and extensions. Bootstrap your environment with a single click and in no time.
+A Template for Microsoft 365 Admins to manage their Microsoft 365 and Azure environment. The template is based on a pre-build image with common tools and extensions to fire off terminal commands right away. Bootstrap your environment with a single click and in no time.
 
 ## Options
 
@@ -9,7 +9,7 @@ A Template for Microsoft 365 Admins to manage their Microsoft 365 and Azure envi
 |-----|-----|-----|-----|
 | imageVersion | Select or enter the image version: | string | latest |
 | powerShellUpdatecheck | Configure PowerShell: Notify on startup that a new version has been released. | string | LTS |
-| powerShellTelemetryOptOut | Configure PowerShell: Opt-out of PowerShell Telemetry data collection. | string | 1 |
+| powerShellTelemetryOptOut | Configure PowerShell: Opt-out of PowerShell Telemetry data collection. | string | 0 |
 
 
 
