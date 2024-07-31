@@ -48,6 +48,8 @@
     "vscode": {
       // 👇 Configure VS Code specific settings.
       "settings": {
+        // 👇 You may clone this repository to start with your own dotfiles
+        "dotfiles.repository": "https://github.com/workoho/devcontainer-dotfiles.git",
 			  "debug.openDebug": "neverOpen",
 			  "editor.formatOnType": true,
 			  "editor.formatOnPaste": true,

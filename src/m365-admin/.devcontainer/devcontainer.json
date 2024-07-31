@@ -36,6 +36,8 @@
     "vscode": {
       // 👇 Configure VS Code specific settings.
       "settings": {
+        // 👇 You may clone this repository to start with your own dotfiles
+        "dotfiles.repository": "https://github.com/workoho/devcontainer-dotfiles.git",
 			  "debug.openDebug": "neverOpen",
 			  "editor.formatOnType": true,
 			  "editor.formatOnPaste": true,
@@ -48,7 +50,7 @@
             "overrideName": true,
             "path": "pwsh",
             "args": [
-              "-l",
+              "-Login",
               "-NoLogo",
               "-Interactive"
             ],
@@ -59,7 +61,7 @@
             "overrideName": true,
             "path": "bash",
             "args": [
-              "-l"
+              "--login"
             ],
             "icon": "terminal-bash"
           },
@@ -68,7 +70,7 @@
             "overrideName": true,
             "path": "zsh",
             "args": [
-              "-l",
+              "--login",
               "--interactive"
             ],
             "icon": "terminal-debian"
