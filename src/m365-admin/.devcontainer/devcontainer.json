@@ -48,7 +48,7 @@
             "overrideName": true,
             "path": "pwsh",
             "args": [
-              "-Login",
+              "-l",
               "-NoLogo",
               "-Interactive"
             ],
@@ -59,7 +59,7 @@
             "overrideName": true,
             "path": "bash",
             "args": [
-              "--login"
+              "-l"
             ],
             "icon": "terminal-bash"
           },
@@ -68,7 +68,7 @@
             "overrideName": true,
             "path": "zsh",
             "args": [
-              "--login",
+              "-l",
               "--interactive"
             ],
             "icon": "terminal-debian"
@@ -128,8 +128,8 @@
 
 	// 👇 Set environment variables for VS Code and related sub-processes (terminals, tasks, debugging, etc.)
 	"remoteEnv": {
-    "PATH": "${workspaceFolder}/Scripts:${containerEnv:PATH}",
-    "PSModulePath": "${workspaceFolder}/Modules"
+    "PATH": "${containerWorkspaceFolder}/Scripts:${containerEnv:PATH}",
+    "PSModulePath": "${containerWorkspaceFolder}/Modules"
   },
 
   // 👇 Set the host requirements for the container

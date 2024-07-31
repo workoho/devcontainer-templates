@@ -20,6 +20,7 @@
 
 # JSON and YAML files will always have LF line endings on checkout and in the repository.
 *.json text eol=lf
+*.jsonc text eol=lf
 *.yml text eol=lf
 *.yaml text eol=lf
 
