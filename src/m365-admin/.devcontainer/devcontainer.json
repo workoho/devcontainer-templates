@@ -102,7 +102,9 @@
         "timonwong.shellcheck",
         "foxundermoon.shell-format",
         "mads-hartmann.bash-ide-vscode",
+        "Remisa.shellman",
         "rogalmic.bash-debug",
+        "rpinski.shebang-snippets",
 
         // PowerShell related extensions
         "ms-vscode.powershell",
